@@ -4,7 +4,10 @@ sapper的webpack模板，在官方基础上集成了saas的编译，引入了一
 ### 初始化项目
 
 ```
-npx degit "KeiferJu/sapper-template-saas" my-app
+# for Rollup
+npx degit "KeiferJu/sapper-template-saas#rollup" my-app
+# for webpack
+npx degit "KeiferJu/sapper-template-saas#webpack" my-app
 cd my-app
 
 npm install
