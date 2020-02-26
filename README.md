@@ -3,12 +3,13 @@ sapper的webpack模板，在官方基础上集成了saas的编译，引入了一
 
 ### 初始化项目
 
+```
 npx degit "KeiferJu/sapper-template-saas" my-app
 cd my-app
 
 npm install
 npm run dev & open http://localhost:3000
-
+```
 
 ### 使用saas：
 ```
