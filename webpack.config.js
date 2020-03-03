@@ -9,6 +9,13 @@ const dev = mode === 'development';
 const alias = { svelte: path.resolve('node_modules', 'svelte') };
 const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
+const onwarn = (warning, onwarn) => {
+	if(warning.message === 'Unused CSS selector'){
+		return;
+	}else{
+		return (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning)
+	}
+};
 
 const sveltePreprocess = require('svelte-preprocess');
 const preprocess = sveltePreprocess({
@@ -31,6 +38,7 @@ module.exports = {
 					use: {
 						loader: 'svelte-loader',
 						options: {
+							onwarn,
 							preprocess, // <-- ADD THIS LINE
 							dev,
 							hydratable: true,
@@ -69,6 +77,7 @@ module.exports = {
 					use: {
 						loader: 'svelte-loader',
 						options: {
+							onwarn,
 							preprocess, // <-- ADD THIS LINE
 							css: false,
 							generate: 'ssr',
