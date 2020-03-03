@@ -4,8 +4,7 @@
 </script>
 
 <style lang="scss">
-  @import "../style/global.scss";   // 引入全局样式
-
+  @import "../style/global.scss";
   main {
     position: relative;
     max-width: 56em;

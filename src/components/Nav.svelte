@@ -4,6 +4,7 @@
 	let name = 'home';
 	//   定义事件监听器
 	EventBus.addEventListener('ww.myevent', (data) => {
+		alert('触发事件');
 		name = data;
 	})
 

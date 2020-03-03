@@ -53,4 +53,4 @@
 </figure>
 
 <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
-<button class="button" on:click={test}>测试事件总线</button>
+<button class="button is-danger is-rounded" on:click={test}>测试事件总线</button>
