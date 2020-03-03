@@ -1,5 +1,9 @@
 // global.scss
+@charset "utf-8";
+@import "../../node_modules/bulma/bulma.sass";
 @import "./theme.scss";
 
 
-
+html{
+    font-size: 12px;
+  }
