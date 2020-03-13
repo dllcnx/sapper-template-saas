@@ -3,7 +3,7 @@
   export let segment;
 </script>
 
-<style lang="scss">
+<style lang="scss" global>
   @import "../style/global.scss";
   main {
     position: relative;
