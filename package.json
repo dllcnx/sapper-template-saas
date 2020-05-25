@@ -3,7 +3,7 @@
   "description": "集成saas编译的sapper模板",
   "version": "0.0.1",
   "scripts": {
-    "dev": "sapper dev",
+    "dev": "sapper dev --hot=false",
     "build": "sapper build",
     "export": "sapper export",
     "start": "node __sapper__/build",
